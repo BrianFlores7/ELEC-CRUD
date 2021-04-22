@@ -1,0 +1,15 @@
+{
+  "name": "hack",
+  "version": "1.0.0",
+  "description": "conexion a mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "app.js"
+  },
+  "author": "Brian Aguilar",
+  "license": "ISC",
+  "dependencies": {
+    "ibm_db": "^2.7.3",
+    "mysql": "^2.18.1"
+  }
+}
