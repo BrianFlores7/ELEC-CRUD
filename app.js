@@ -24,15 +24,3 @@ ibmdb.open(connStr, function (err,conn) {
   });
 });
 
-ibmdb.open(connStr).then(
-    conn => {
-      conn.query("select * from pqg82494.usuarios").then(data => {
-        console.log(data);
-        conn.closeSync();
-      }, err => {
-        console.log(err);
-      });
-    }, err => {
-      console.log(err)
-    }
-);
