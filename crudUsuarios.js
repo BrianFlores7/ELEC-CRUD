@@ -8,10 +8,9 @@ let getData = function()
 } 
 
 //guardamos los datos del usuario   
-let setData = function (user, password)
+let setData = function (user, correo)
 {
-    var sentencia = "INSERT INTO PQG82494.USUARIOS VALUES( " + "'" + user + "'" + "'" + password + "'" + ")"
-    console
+    var sentencia = 'INSERT INTO PQG82494.USUARIOS ("USUARIO","CORREO") VALUES(' + "'" + user + "', " + "'" + correo + "'" + ");"
     return sentencia
 }
 

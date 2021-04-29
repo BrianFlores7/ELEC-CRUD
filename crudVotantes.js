@@ -1,13 +1,13 @@
 let get_Data = function()
 {
-    var sentencia = 'SELECT "NOMBRE", "APELLIDO", "CURP", "CLAVEELECTOR" FROM "PQG82494"."VOTANTES";'
+    var sentencia = 'SELECT "NOMBRE", "APELLIDO", "CURP", "CLAVEELCTOR" FROM "PQG82494"."VOTANTES";'
     return sentencia
 }
 
 let setData = function(nombre, apellido, curp, clave_elector, estado, municipio)
 {
     var sentencia = 'INSERT INTO  "PQG82494"."VOTANTES" '
-    +  '("NOMBRE","APELLIDO","CURP","CLAVEELECTOR", "ESTADO", "MUNICIPIO") VALUES('
+    +  '("NOMBRE","APELLIDO","CURP","CLAVEELCTOR", "ESTADO", "MUNICIPIO") VALUES('
     + "'" + nombre + "','" + apellido + "','" + curp + "','" + clave_elector + "', '"+ estado + "', '" + municipio + "');" 
     return sentencia
 }

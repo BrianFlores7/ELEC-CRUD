@@ -67,24 +67,72 @@ ibmdb.open(connStr, function (err,conn) {
     })
   })
 
+    app.post('/add/Partidos', (req, res) =>{
+      var crud =  require('./crudPartido')
+      const partiObject = {
+        id_partido: req.body.id_partido,
+        correo: req.body.correo
+      };
+
+      id_partido = partiObject.id_partido
+      correo = partiObject.correo
+     
+      conn.query(crud.set_partido(id_partido, correo), err =>{
+        if (err)
+        {
+          throw err
+        };
+        res.send("Creado")
+      })
+    })
+
+    app.post('/add/Usuarios', (req, res) =>{
+      var crud =  require('./crudUsuarios')
+      const userObject = {
+        user: req.body.user,
+        correo: req.body.correo
+      };
+
+      user = userObject.user
+      correo = userObject.correo
+     
+      conn.query(sql = crud.setData(user, correo), err =>{
+        if (err)
+        {
+          console.log(sql)
+          throw err
+        };
+        res.send("Creado")
+      })
+    })
+
+    app.post('/add/Votantes', (req, res) =>{
+      var crud =  require('./crudVotantes')
+      const votantesObject = {
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        curp: req.body.curp,
+        clave_elector: req.body.clave_elector,
+        estado: req.body.estado,
+        municipio: req.body.municipio,
+      };
+
+      nombre = votantesObject.nombre
+      apellido = votantesObject.apellido,
+      curp =  votantesObject.curp,
+      clave_elector =  votantesObject.clave_elector,
+      estado =  votantesObject.estado,
+      municipio =  votantesObject.municipio,
   
-
-    // app.post('/add/Partidos', (req, res) =>{
-
-    //   var sql = 'INSERT INTO PQG82494.PARTIDOS ("ID_PARTIDO","CORREO") VALUES (?)'
-      
-    //   const partiObject = {
-    //     id_partido: req.body.id_partido,
-    //     correo: req.body.correo
-    //   }
-      
-    //   conn.query(sql, partiObject, err =>{
-    //     if (err) throw err;
-    //     res.send(partiObject)
-    //   })
-    // })
-  // })
-});
-
+      conn.query(sql = crud.setData(nombre, apellido, curp,clave_elector, estado, municipio), err =>{
+        if (err)
+        {
+          console.log(sql)
+          throw err
+        };
+        res.send("Creado")
+      })
+    })
+})
 
 app.listen(Port, ()=> console.log(`Server running on port ${Port}`))
