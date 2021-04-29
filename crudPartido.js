@@ -19,7 +19,5 @@ let get_all = function ()
 module.exports =
 {
     set_partido,
-    get_partido,
-    get_all,
-    
+    get_partido,    
 }

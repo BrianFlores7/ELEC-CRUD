@@ -1,4 +1,4 @@
-let get_Data = function()
+let get_allData = function()
 {
     var sentencia = 'SELECT "NOMBRE", "APELLIDO", "CURP", "CLAVEELCTOR" FROM "PQG82494"."VOTANTES";'
     return sentencia

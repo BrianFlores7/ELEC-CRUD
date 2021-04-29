@@ -1,7 +1,7 @@
 
 
 //obtenemos todos los datos de la tabla USURIOS
-let getData = function()
+let getAllData = function()
 {
     var sentencia = 'SELECT * FROM pqg82494.usuarios'
     return sentencia
@@ -15,7 +15,7 @@ let setData = function (user, correo)
 }
 
 //Obtenemos todos los usuarios
-let getUsers = function() 
+let getAllUsers = function() 
 {
     var sentencia = 'SELECT "USER" FROM PQG82494.USUARIOS'
     return sentencia
@@ -32,8 +32,6 @@ let get_user = function(user)
 
 module.exports =
 {
-    getData,
     setData,
-    getUsers,
     get_user,
 }
