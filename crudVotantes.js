@@ -1,4 +1,4 @@
-let getData = function()
+let get_Data = function()
 {
     var sentencia = 'SELECT "NOMBRE", "APELLIDO", "CURP", "CLAVEELECTOR" FROM "PQG82494"."VOTANTES";'
     return sentencia
@@ -14,8 +14,13 @@ let setData = function(nombre, apellido, curp, clave_elector)
 
 let getData = function(curp)
 {
-    var sentencia = 'SELECT "NOMBRE", "APELLIDO", "CURP", "CLAVEELECTOR" FROM "PQG82494"."VOTANTES" WHERE "CURP" = '
+    var sentencia = 'SELECT "NOMBRE", "APELLIDO", "CURP", "CLAVEELCTOR" FROM "PQG82494"."VOTANTES" WHERE "CURP" = '
     + "'" + curp + "'"
     return sentencia
 }
 
+module.exports =
+{
+    getData,
+    setData,
+}

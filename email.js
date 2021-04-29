@@ -5,16 +5,16 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: '*****',
-    pass: '*******'
+    user: '193216@ids.upchiapas.edu.mx',
+    pass: 'T27oct01'
   }
 });
 
 var mensaje = "Hola desde nodejs...";
 
 var mailOptions = {
-  from: '********************************',
-  to: '********************************',
+  from: '193216@ids.upchiapas.edu.mx',
+  to: 'brianbtfa@hotmail.com',
   subject: 'Asunto Del Correo',
   text: mensaje
 };

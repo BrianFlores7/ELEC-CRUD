@@ -11,6 +11,7 @@ let getData = function()
 let setData = function (user, password)
 {
     var sentencia = "INSERT INTO PQG82494.USUARIOS VALUES( " + "'" + user + "'" + "'" + password + "'" + ")"
+    console
     return sentencia
 }
 
@@ -25,7 +26,7 @@ let getUsers = function()
 //puede servir en caso de que olvide su contraseña (esto regresa todos los valores con los cual coincida user)
 let get_user = function(user)
 {
-    var sentencia = 'SELECT "USER","Password" FROM PQG82494.USUARIOS where "USER" = '+ "'" + user + "'"
+    var sentencia = 'SELECT "USER","CORREO" FROM PQG82494.USUARIOS where "USER" = '+ "'" + user + "'"
     return sentencia
 }
 
